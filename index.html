@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма реєстрації</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        select {
+            width: calc(100% - 20px);
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <a href="https://github.com/itwasdeesey/weblb">Список лабораторних</a>
+        
+        <h1>Форма реєстрації</h1>
+
+        <form action="https://webhook.site/ec8c29ca-b892-4e4d-a357-98188f2ed463" method="post">
+            <label for="first_name">Ім'я:</label>
+            <input type="text" id="first_name" name="first_name" pattern="[A-Za-zА-Яа-яЁёІіЇїЄє'-]+" required>
+
+            <label for="last_name">Прізвище:</label>
+            <input type="text" id="last_name" name="last_name" pattern="[A-Za-zА-Яа-яЁёІіЇїЄє'-]+" required>
+
+            <label for="email">Електронна пошта:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confirm_password">Підтвердження паролю:</label>
+            <input type="password" id="confirm_password" name="confirm_password" required>
+
+
+            <label for="gender">Стать:</label>
+            <select id="gender" name="gender">
+                <option value="male">Чоловіча</option>
+                <option value="female">Жіноча</option>
+                <option value="other">Нєфор</option>
+            </select>
+
+            <input type="submit" value="Зареєструватися">
+        </form>
+    </div>
+</body>
+</html>
